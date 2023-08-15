@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+
+import MapSection from './components/Map' // import the map here
+
+
+
+import './App.css'
+
+const location = {
+  address: 'GoMyCode Hackerspace, 1 Place Tahar Haddad, 1 Tunis 1053, Tunis 1053',
+  lat: 36.8340197,
+  lng: 10.234206,
+} // our location object from earlier
+
+const App = () => (
+  <div className="App">
+   
+    <MapSection location={location} zoomLevel={17} /> {/* include it here */}
+   
+  </div>
+)
+
+export default App
